@@ -1,0 +1,48 @@
+ul {
+  list-style: none;
+}
+ul li {
+  padding: 10px 0px;
+}
+.oneplus-link-btn {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid #eb0028;
+  background-color: #eb0028;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  line-height: 60px;
+  /*设定高度使用line-height*/
+  width: 150px;
+}
+.oneplus-link-btn:hover {
+  border-color: #c40019;
+}
+.oneplus-link-btn[disabled] {
+  background-color: #bab6b3;
+  border-color: #bab6b3;
+}
+.oneplus-font-size-20 {
+  font-size: 30px;
+}
+.oneplus-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+.oneplus-input:focus {
+  border-color: red;
+  outline: none;
+}
+.oneplus-button {
+  display: table-cell;
+  height: 100%;
+  writing-mode: tb-rl;
+  zoom: 1;
+  vertical-align: middle;
+}
+.oneplus-validate-tip {
+  font-style: normal;
+  color: red;
+}

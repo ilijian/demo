@@ -1,0 +1,21 @@
+.coins-insufficient
+{
+	text-align: center;
+}
+
+.coins-insufficient h3
+{
+	font-size: 1.5em;
+	line-height: 1.5;
+	color: red;
+}
+
+.coins-insufficient p
+{
+	color: grey;
+}
+
+.coins-insufficient a
+{
+	color: red;
+}

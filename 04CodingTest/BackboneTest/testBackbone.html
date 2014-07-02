@@ -1,0 +1,81 @@
+﻿<!doctype html>
+<html lang="zh-cn">
+<head>
+	<link href="../lib/ligerUI/Source/lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css">  
+	<link href="wms.css" rel="stylesheet" type="text/css">  
+    <script src="lib/jquery1.11.1.js"></script>
+	<script src="../lib/ligerUI/Source/lib/ligerUI/js/core/base.js" type="text/javascript"></script>
+	<script src="../lib/ligerUI/Source/lib/ligerUI/js/plugins/ligerGrid.js" type="text/javascript"></script>
+	<script src="../lib/ligerUI/Source/lib/ligerUI/js/plugins/ligerResizable.js" type="text/javascript"></script>
+	<script src="../lib/ligerUI/Source/lib/ligerUI/js/plugins/ligerDrag.js" type="text/javascript"></script>
+	<script src="lib/underscore.js"></script>
+	<script src="../lib/backbone.js"></script>
+	<script src="testBackbone.js"></script>
+</head>
+<body class="wms">
+	<div id="wareAreaManage">
+		<div id="controlPanel">
+			<button id="addBtn">添加</button>
+			<button id="editBtn">修改</button>
+			<button id="deleteBtn">删除</button>
+		</div>
+		<div id="toptoolbar" ></div>
+		<div id="compactTable">
+			<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="p-table">
+				<thead>
+					<tr class="p-table-header">
+						<td>
+							<input type='checkbox'/>
+						</td>
+						<td>机构名称</td>
+						<td>仓库编号</td>
+						<td>仓库名称</td>
+					</tr>
+				</thead>
+				<tbody id="compactTableBody">
+					<tr class="p-table-header">
+						<td>
+							<input type='checkbox'/>
+						</td>
+						<td>机构名称</td>
+						<td>仓库编号</td>
+						<td>仓库名称</td>
+					</tr>
+					<tr class="p-table-header">
+						<td>
+							<input type='checkbox'/>
+						</td>
+						<td><span color="red">*</span>机构名称</td>
+						<td>仓库编号</td>
+						<td>仓库名称</td>
+					</tr>
+					<tr class="p-table-header">
+						<td>
+							<input type='checkbox'/>
+						</td>
+						<td>机构名称</td>
+						<td>仓库编号</td>
+						<td>仓库名称</td>
+					</tr>
+					<tr class="p-table-header">
+						<td>
+							<input type='checkbox'/>
+						</td>
+						<td>机构名称</td>
+						<td>仓库编号</td>
+						<td>仓库名称</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<script type="text/template" id="item-template">
+		<td>
+			<input class="toggle" type="checkbox" />
+		</td>
+		<td><%=institutionId%></td>
+		<td><%=wareHouseCode%></td>
+		<td><%=wareHouseName%></td>
+	 </script>
+</body>
+</html>

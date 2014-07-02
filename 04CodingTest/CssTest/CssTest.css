@@ -1,0 +1,47 @@
+figure
+{
+	width:150px;
+	margin:20px;
+	border:1px solid #666;
+	position:relative;
+	float:left;
+}
+
+img
+{
+	width:150px;
+	height:auto;
+	margin:auto;
+	display:block;	/*去掉下方的基线空白，因为行内元素的对齐原则是与文本基线对齐，而不是与边框底部*/
+}
+
+figcaption
+{
+	display:none;
+	position:absolute;
+	left:74%;
+	top:14px;
+	width:130px;
+	padding:10px;
+	background:#f2eaea;
+	border:3px solid red;
+	border-radius:6px;
+}
+
+figcaption::before
+{
+	content:"";
+	position:absolute;
+	border:12px solid;
+	border-color: transparent red transparent transparent;
+	right:100%;
+	top:7px;
+	height:0px;
+	width:0px;
+}
+
+figure:hover figcaption
+{
+	display:block;
+	z-index:100;
+}

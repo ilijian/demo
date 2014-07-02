@@ -1,0 +1,103 @@
+﻿<!doctype html>
+<html lang="zh-cn">
+<head>
+	<link href="../../05lib/UI/bootstrap-3.0.3/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="layout.css" rel="stylesheet" type="text/css">
+	<script data-main="perfectTable" src="../../05lib/JS/require.js"></script>
+</head>
+<body id="mainArea">
+	<div>
+		<div id="controlPanel">
+			<button id="refreshBtn" type="button" class="btn btn-primary">刷新</button>
+			<button id="addBtn" type="button" class="btn btn-success">增加</button>
+			<button id="editBtn" type="button" class="btn btn-info">编辑</button>
+			<button id="deleteBtn" type="button" class="btn btn-warning">删除</button>
+		</div>
+		<table class="table table-condensed" id="perfectTable">
+			<thead>
+				<tr class="p-table-header">
+					<td><input type='checkbox'/></td>
+					<td>ID</td>
+					<td>姓名</td>
+					<td>性别</td>
+					<td>职业</td>
+					<td>联系方式</td>
+					<td>住址</td>
+				</tr>
+			</thead>
+			<tbody id="perfectTable-tbody">
+				<tr>
+					<td><input type='checkbox' class="toggle"/></td>
+					<td>A00000000001</td>
+					<td>ExampleName</td>
+					<td>Sex</td>
+					<td>Career</td>
+					<td>Contact Phone</td>
+					<td>ExampleAddress</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<div class="modal fade" id="modalDialog">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h4 class="modal-title">Modal title</h4>
+		  </div>
+		  <div class="modal-body">
+		  </div>
+		  <!--
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			<button type="button" class="btn btn-primary" id="saveChanges">Save changes</button>
+		  </div>
+		  -->
+		</div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+	<script id="personTemplate" type="text/template">
+		<td><input class="toggle" type="checkbox" <%selected? 'checked="checked"' : '' %> /></td>
+		<td><%=id%></td>
+		<td><%=name%></td>
+		<td><%=sex%></td>
+		<td><%=career%></td>
+		<td><%=phone%></td>
+		<td><%=address%></td>
+	</script>
+	<script id="dialogContentTemplate" type="text/template">
+		<form id="demo_form" action="#" method="post">
+			<table>	
+				<tr>
+					<td><label for="name">姓名</label></td>
+					<td><input type="text" id="name" name="name" <%if(name){%>value="<%=name%>"<%}%>/></td>
+					<td><label for="sex">性别</label></td>
+					<td>
+						<select id="sex" name="sex">
+							<option value="M">男</option>
+							<option value="F">女</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="career">职业</label></td>
+					<td><input type="text" id="career" name="career" <%if(career){%>value="<%=career%>"<%}%>/></td>
+					<td><label for="phone">联系电话</label></td>
+					<td><input type="text" id="phone" name="phone" <%if(phone){%>value="<%=phone%>"<%}%>/></td>
+				</tr>
+				<tr>
+					<td><label for="address">地址</label></td>
+					<td colspan="3"><input type="text" id="address" name="address" <%if(address){%>value="<%=address%>"<%}%>/></td>
+				</tr>
+			</table>
+			<div>
+				<button type="button" class="btn btn-primary" id="saveChanges">保存</button>
+				<button type="button" class="btn btn-primary" id="discardChanges">重置</button>
+				<button type="button" class="btn btn-default" id="cancelChanges">取消</button>
+			</div>
+		</form>
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+.hidden-label
+{
+	display:none;
+}
+
+#Email
+{
+	font-size: x-large;
+	font-family: 
+	display: block;
+	max-width:10em;
+	min-width:5em;
+}
+
+#Passwd
+{
+	font-size: x-large;
+	display: block;
+	max-width:10em;
+	min-width:5em;
+}
+
+#signIn
+{
+	font-size: x-large;
+	display: block;
+	max-width:10em;
+	min-width:5em;
+	border: 2px;
+	padding: 1px 0px;
+}

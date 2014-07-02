@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Drawing Rectangles</title>
+		<style type="text/css">
+			#Canvas1,#Canvas2,#Canvas3 {
+				border: dotted 1px black;
+			}
+		</style>
+		<script>
+			window.onload = function() {
+				var theCanvas = document.getElementById('Canvas1');
+				if (theCanvas && theCanvas.getContext) {
+					var ctx = theCanvas.getContext("2d");
+					if (ctx) {
+						for(var i = 0; i<10; i++){
+							ctx.beginPath();
+							ctx.lineWidth = i+1;
+							ctx.moveTo(25,25+i*15);
+							ctx.lineTo(475,25+i*15);
+							ctx.stroke();
+						}
+					}
+				}
+				
+				var theCanvas = document.getElementById('Canvas2');
+				if (theCanvas && theCanvas.getContext) {
+					var ctx = theCanvas.getContext("2d");
+					if (ctx) {
+						for(var i = 0; i<10; i++){
+							ctx.strokeStyle = "cyan";
+							ctx.lineWidth = 1;
+							ctx.beginPath();
+							ctx.moveTo(50,25);
+							ctx.lineTo(50,175);
+							ctx.moveTo(450,25);
+							ctx.lineTo(450,175);
+							ctx.stroke();
+							
+							ctx.lineWidth = 25;
+							ctx.strokeStyle = "black";
+							ctx.lineCap = "butt";
+							ctx.beginPath();
+							ctx.moveTo(50,50);
+							ctx.lineTo(450,50);
+							ctx.storke();
+							
+							ctx.lineCap = "round";
+							ctx.beginPath();
+							ctx.moveTo(50,50);
+							ctx.lineTo(450,50);
+							ctx.storke();
+							
+							ctx.lineCap = "square";
+							ctx.beginPath();
+							ctx.moveTo(50,50);
+							ctx.lineTo(450,50);
+							ctx.storke();
+							
+							
+						}
+					}
+				}
+				
+				var theCanvas = document.getElementById('Canvas3');
+				if (theCanvas && theCanvas.getContext) {
+					var ctx = theCanvas.getContext("2d");
+					if (ctx) {
+						for(var i = 0; i<10; i++){
+							ctx.beginPath();
+							ctx.lineWidth = i+1;
+							ctx.moveTo(25,25+i*15);
+							ctx.lineTo(475,25+i*15);
+							ctx.stroke();
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Drawing Rectangles</h1>
+		<p>This example will draw several styles of rectangles</p>
+		<canvas id="Canvas1" width="500" height="300">Your browser does not support canvas.</canvas>
+		<canvas id="Canvas2" width="500" height="300">Your browser does not support canvas.</canvas>
+		<canvas id="Canvas3" width="500" height="300">Your browser does not support canvas.</canvas>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+﻿<!doctype html>
+<html lang="zh-cn">
+<head>
+	<meta content="text/html; charset=utf-8">
+	<link href="CssTest.css" rel="stylesheet" type="text/css">
+	<script data-main="CssTest" src="../../05lib/JS/require.js"></script>
+</head>
+<body id="mainArea">
+	<form class="demo-form" action="#" method="post">
+		<fieldset>
+			<legend><span>基础表单控件</span></legend>
+			<section>
+				<p class="note">*表示必填项</p>
+				<label for="user_name">用户名<span>*</span></label>
+				<input type="text" id="user_name" name="user_name"/>
+			</section>
+			<section>
+				<label for="password">密码<span>*</span></label>
+				<input type="password" id="password" name="password"/>
+				<p class="note error">密码必须是8到16位字母或数字</p>
+			</section>
+			<section>
+				<label for="description">描述</label>
+				<textarea id="description" name="description" placeholder="输入描述"></textarea>
+			</section>
+			<section>
+				<label for="special_date">日期</label>
+				<input type="date" id="special_date" name="event_date" min="2012-09-05"/>
+			</section>
+		</fieldset>
+		<fieldset>
+			<legend><span>高级表单控件</span></legend>
+			<section>
+				<h4>选择数字</h4>
+				<section>
+					<input type="checkbox" id="check_one" name="checkset" value="1" tabindex="4"/>
+					<label for="check_one">Option One</label>
+				</section>
+				<section>
+					<input type="checkbox" id="check_two" name="checkset" value="2" tabindex="4"/>
+					<label for="check_two">Option Two</label>
+				</section>
+				<section>
+					<input type="checkbox" id="check_three" name="checkset" value="3" tabindex="4"/>
+					<label for="check_three">Option Three</label>
+				</section>
+				<section>
+					<input type="checkbox" id="check_four" name="checkset" value="4" tabindex="4"/>
+					<label for="check_four">Option Four</label>
+				</section>
+			</section>
+			
+			<section>
+				<h4>标题</h4>
+				<section>
+					<input type="radio" id="radio_one" name="radioBtns" value="choice_one"/>
+					<label for="radio_one">Choice One</label>
+				</section>
+				<section>
+					<input type="radio" id="radio_two" name="radioBtns" value="choice_two"/>
+					<label for="radio_two">Choice Two</label>
+				</section>
+				<section>
+					<input type="radio" id="radio_three" name="radioBtns" value="choice_three"/>
+					<label for="radio_three">Choice Three</label>
+				</section>
+			</section>
+			
+			<section>
+				<label for="select_choice">选择某项</label>
+				<select id="select_choice" name="select_choice">
+					<option value="0"></option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+					<option value="4">Four</option>
+				</select>
+			</section>
+		</fieldset>
+		<section>
+			<input type="submit" value="提交表单"/>
+		</section>
+	</form>
+</body>
+</html>

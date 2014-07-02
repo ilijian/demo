@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<script src="test.js">
+		</script>
+		<link rel="stylesheet" href="test.css" type="text/css" />
+	</head>
+	<body>
+		<div class="coins-insufficient">
+			<img src="C:/Users/admin/Desktop/not-enough.png" alt="error"/>
+			<h3>您没有足够的加油</h3>
+			<p>请稍后再试</p>
+			<p>您可以减少押注数量，再试试</p>
+			<a>刷新试试></a>
+			<a>去看看其他活动吧></a>
+		</div>
+		
+		<div class="on-gamble">
+			<div>
+				<div class="team one"></div>
+				<div class="team vs">
+					<h3>vs</h3>
+					<label class="concede"><span class="team-name">中国</span>让<span class="points">3</span>球</label>
+				</div>
+				<div class="team two">
+				</div>
+			</div>
+			<div class="gamble-options">
+				<div class="one-win">
+					<label><span class="team-name">中国</span>队胜</label>
+					<label>已押<span class="history-wager">3</span>注</label>
+				</div>
+				<div class="even">
+					<label>平局</label>
+					<label>已押<span class="history-wager">3</span>注</label>
+				</div>
+				<div class="two-win">
+					<label><span class="team-name">日本</span>队胜</label>
+					<label>已押<span class="history-wager">3</span>注</label>
+				</div>
+			</div>
+			<div class="gamble-result">
+				<h3>本场比赛</h3>
+				<p>您共押对<span id="hit_points">1</span>注，赢得<span id="earned_coins">9</span>个加油</p>
+			</div>
+		</div>
+		
+	</body>
+</html>

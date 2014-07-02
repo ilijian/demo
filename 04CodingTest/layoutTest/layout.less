@@ -1,0 +1,19 @@
+*{ margin:0px; padding:0px; border: 1px solid black;}
+
+@container-width: 800px;
+@container-height: 100px;
+@item-width: 80px;
+@item-height: 100px;
+@items-width: 2000px; /*这个长度应该在js中根据li的个数计算获得*/
+@nav-width: 20px;
+@nav-height: 30px;
+
+.container{height: @container-height; width: @container-width;}
+
+.nav{height: @nav-height; width: @nav-width; display: inline-block; *display: inline; zoom: 1;}
+
+.container{padding: 0 @nav-width;}
+
+.items{overflow: hidden; position: relative;}
+
+.item{list-style: none; width: @item-width; height: @item-height; float: left; }

@@ -1,0 +1,30 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid black;
+}
+/*这个长度应该在js中根据li的个数计算获得*/
+.container {
+  height: 100px;
+  width: 800px;
+}
+.nav {
+  height: 30px;
+  width: 20px;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+.container {
+  padding: 0 20px;
+}
+.items {
+  overflow: hidden;
+  position: relative;
+}
+.item {
+  list-style: none;
+  width: 80px;
+  height: 100px;
+  float: left;
+}

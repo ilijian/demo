@@ -1,0 +1,61 @@
+body
+{
+	/*background-color:black;*/
+}
+
+ul
+{
+	list-style-type:none;
+	width:900px;
+	margin:auto;
+	padding:0px;
+}
+
+ul li
+{
+	margin:0px;
+	padding:0px;
+	border:1px black solid;
+	height:900px;
+	width:900px;
+}
+
+
+
+
+#img-div0
+{
+	min-height:900px;
+	overflow:hidden;
+	background-image:url(m-bg.jpg);
+	background-position:center center;
+}
+
+#img-div1 img
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:300px;
+}
+
+/*
+#img2
+{
+	position:relative;
+	height:900px;
+}
+
+#ribbon1
+{
+	position:absolute;
+}
+
+#ribbon2
+{
+	position:absolute;
+	right:0px;
+	bottom:0px;
+}
+
+*/
