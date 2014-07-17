@@ -69,34 +69,36 @@
 	</script>
 	<script id="dialogContentTemplate" type="text/template">
 		<form id="demo_form" action="#" method="post">
-			<table>	
-				<tr>
-					<td><label for="name">姓名</label></td>
-					<td><input type="text" id="name" name="name" <%if(name){%>value="<%=name%>"<%}%>/></td>
-					<td><label for="sex">性别</label></td>
-					<td>
-						<select id="sex" name="sex">
-							<option value="M">男</option>
-							<option value="F">女</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<td><label for="career">职业</label></td>
-					<td><input type="text" id="career" name="career" <%if(career){%>value="<%=career%>"<%}%>/></td>
-					<td><label for="phone">联系电话</label></td>
-					<td><input type="text" id="phone" name="phone" <%if(phone){%>value="<%=phone%>"<%}%>/></td>
-				</tr>
-				<tr>
-					<td><label for="address">地址</label></td>
-					<td colspan="3"><input type="text" id="address" name="address" <%if(address){%>value="<%=address%>"<%}%>/></td>
-				</tr>
-			</table>
-			<div>
+			<fieldset>
+				<section>
+					<label for="name">姓名</label>
+					<input type="text" class="form-control" id="name" name="name" <%if(name){%>value="<%=name%>"<%}%>/>
+				</section>
+				<section>
+					<label for="sex">性别</label>
+					<select class="form-control" id="sex" name="sex">
+						<option value="M">男</option>
+						<option value="F">女</option>
+					</select>
+				</section>
+				<section>
+					<label for="career">职业</label>
+					<input type="text" class="form-control" id="career" name="career" <%if(career){%>value="<%=career%>"<%}%>/>
+				</section>
+				<section>
+					<label for="phone">联系电话</label>
+					<input type="text" class="form-control" id="phone" name="phone" <%if(phone){%>value="<%=phone%>"<%}%>/>
+				</section>
+				<section>
+					<label for="address">地址</label>
+					<input type="text" class="form-control" id="address" name="address" <%if(address){%>value="<%=address%>"<%}%>/>
+				</section>
+			</fieldset>
+			<section>
 				<button type="button" class="btn btn-primary" id="saveChanges">保存</button>
 				<button type="button" class="btn btn-primary" id="discardChanges">重置</button>
 				<button type="button" class="btn btn-default" id="cancelChanges">取消</button>
-			</div>
+			</section>
 		</form>
 	</script>
 </body>

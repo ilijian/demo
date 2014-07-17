@@ -24,11 +24,27 @@ function moveElement(element,final_x,final_y,interval){
 }
 
 window.onload = function(){
-	var animation = document.getElementById('animation');
-	moveElement(animation,100,200,20);
+	var countdownDisplay = document.getElementById('animation');
+
+	//setTimeout(function(){countdown(countdownDisplay,100)},500);
+	//setTimeout(function(){alert('aaaa')},5000);
+	setTimeout("pp()",2000);
 }
 
+function countdown(element, startNum){
+	element.childNodes[0].nodeValue = startNum;
+	startNum--;
+	if(startNum <= 0){
+		return;
+	}
+	setTimeout(function(){countdown(element,startNum)},500);
+}
+
+function pp(){
+	console.log("beautiful");
+}
 //表单输入的通常处理
+
 
 
 

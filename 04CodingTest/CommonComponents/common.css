@@ -4,6 +4,9 @@ ul {
 ul li {
   padding: 10px 0px;
 }
+body {
+  font-size: 30px;
+}
 .oneplus-link-btn {
   color: white;
   text-decoration: none;
@@ -13,9 +16,11 @@ ul li {
   display: inline-block;
   *display: inline;
   zoom: 1;
+  width: 150px;
+}
+.oneplus-link-btn span {
   line-height: 60px;
   /*设定高度使用line-height*/
-  width: 150px;
 }
 .oneplus-link-btn:hover {
   border-color: #c40019;
@@ -30,17 +35,33 @@ ul li {
 .oneplus-input {
   padding: 10px;
   border: 1px solid #ccc;
+  vertical-align: middle;
 }
 .oneplus-input:focus {
   border-color: red;
   outline: none;
 }
 .oneplus-button {
-  display: table-cell;
-  height: 100%;
-  writing-mode: tb-rl;
+  width: 100px;
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid #eb0028;
+  background-color: #eb0028;
+  display: inline-block;
+  *display: inline;
   zoom: 1;
   vertical-align: middle;
+  outline: none;
+}
+.oneplus-button:hover {
+  cursor: pointer;
+  border-color: #c40019;
+}
+.oneplus-button[disabled] {
+  background-color: #bab6b3;
+  border-color: #bab6b3;
 }
 .oneplus-validate-tip {
   font-style: normal;

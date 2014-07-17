@@ -4,7 +4,7 @@ simplifiedjs = (function(){
 	//常用的函数
 	Function.prototype.extend = function(Parent){
 		if(Parent instanceof Function){
-			this.prototype = new Parent();
+			this.prototype = new Parent;
 		}
 		return this;
 	}
@@ -36,7 +36,7 @@ simplifiedjs = (function(){
 
 	String.prototype.trim = String.prototype.trim || function(){
 		if(!this) return this;
-		return this.replace(/^\s+|\s+$/g,"")
+		return this.replace(/^\s+|\s\s*$/g,"");
 	}
 	
 	Element.prototype.insertAfter = function(newElement, targetElement){

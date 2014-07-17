@@ -6,63 +6,39 @@ ul li{
 	padding: 10px 0px;
 }
 
+body{
+	font-size: 30px;
+}
+
 //*******链接式按钮*********BEGIN
 
 @link-btn-height: 60px;
 @link-btn-width: 150px;
 @link-disable-color: #bab6b3;
+@hover-border-color: #c40019;
 
-.oneplus-link-btn{
-	color: white;
-	text-decoration: none;
-	text-align: center;
-	border: 2px solid #eb0028; 
-	background-color: #eb0028; 
-	display: inline-block; 
-	*display: inline; 
-	zoom:1; 
-	line-height: @link-btn-height;	/*设定高度使用line-height*/
-	width: @link-btn-width;
-}
+.oneplus-link-btn{color: white;text-decoration: none;text-align: center;border: 2px solid #eb0028; background-color: #eb0028; display: inline-block; *display: inline; zoom:1; width: @link-btn-width;}
 
-.oneplus-link-btn:hover{
-	border-color: #c40019;
-}
+.oneplus-link-btn span{	line-height: @link-btn-height;	/*设定高度使用line-height*/}
 
-.oneplus-link-btn[disabled]{
-	background-color: @link-disable-color;
-	border-color: @link-disable-color;
-}
+.oneplus-link-btn:hover{border-color: @hover-border-color;}
+
+.oneplus-link-btn[disabled]{background-color: @link-disable-color;border-color: @link-disable-color;}
 
 //*******链接式按钮*********END
 
 //*******文本式表单输入*********BEGIN
 
-.oneplus-font-size-20{
-	font-size: 30px;
-}
+.oneplus-font-size-20{font-size: 30px;}
 
-.oneplus-input{
-	padding: 10px;
-	border: 1px solid #ccc;
-}
+.oneplus-input{	padding: 10px;border: 1px solid #ccc;vertical-align: middle;}
 
-.oneplus-input:focus{
-	border-color: red;
-	outline:none;
-}
+.oneplus-input:focus{border-color: red; outline:none;}
 
-.oneplus-button{
-	display: table-cell;
-	height: 100%;
-	writing-mode: tb-rl;
-	zoom: 1;
-	vertical-align: middle;
-}
+.oneplus-button{width: 100px;padding: 5px;color: white;text-decoration: none;text-align: center;border: 2px solid #eb0028; background-color: #eb0028; display: inline-block; *display: inline; zoom: 1;vertical-align: middle; outline: none;}
+.oneplus-button:hover{cursor: pointer; border-color: @hover-border-color;}
+.oneplus-button[disabled]{background-color: @link-disable-color;border-color: @link-disable-color;}
 
-.oneplus-validate-tip{
-	font-style: normal;
-	color: red;
-}
+.oneplus-validate-tip{font-style: normal;color: red;}
 
 //*******文本式表单输入*********END

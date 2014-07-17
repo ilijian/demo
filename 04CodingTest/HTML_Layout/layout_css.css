@@ -1,31 +1,12 @@
-.hidden-label
-{
-	display:none;
+ul{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
 }
 
-#Email
-{
-	font-size: x-large;
-	font-family: 
-	display: block;
-	max-width:10em;
-	min-width:5em;
-}
-
-#Passwd
-{
-	font-size: x-large;
-	display: block;
-	max-width:10em;
-	min-width:5em;
-}
-
-#signIn
-{
-	font-size: x-large;
-	display: block;
-	max-width:10em;
-	min-width:5em;
-	border: 2px;
-	padding: 1px 0px;
+ul li{
+	float: left;
+	height: 300px;
+	width: 400px;
 }
