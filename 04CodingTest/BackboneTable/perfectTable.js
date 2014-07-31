@@ -36,7 +36,10 @@ define(["jquery","underscore","backbone","bootstrap"],function($,_,Backbone){
 	var PersonCollection = Backbone.Collection.extend({
 		model: PersonModel,
 		initialize: function(){
-			
+			//JSON.parse(localStorage.list) || [];
+		},
+		events:{
+
 		}
 	});
 	
@@ -61,6 +64,26 @@ define(["jquery","underscore","backbone","bootstrap"],function($,_,Backbone){
 		}
 	});
 	
+//-----------------------------VIEW OF TABLE----------------------------------------------
+	var PersonListView = Backbone.View.extend({
+		el: $('#perfectTable'),
+		initialize: function(){
+			this.listenTo(personList, 'add', this.addOne); //List与View之间是通过调用和事件来实现同步的
+		},
+		events: {
+			
+		},
+		render: function(){
+			return this;
+		},
+		addOne: function(personModel){
+			//alert('addOne')
+			var view = new PersonView({model:personModel});
+			this.el.$('#perfectTable-tbody').append(view.render().el)
+		}
+
+	});
+
 //----------------------------VIEW OF DIALOG-----------------------------------------------	
 	var DialogView = Backbone.View.extend({
 		el: $('#modalDialog'),
@@ -82,8 +105,19 @@ define(["jquery","underscore","backbone","bootstrap"],function($,_,Backbone){
 		},
 		saveModel: function(){
 			//setModelWithUserInput(this.model);
+			this.model.name = $('#name').val();
+			this.model.sex = $('#sex').val();
+			this.model.phone = $('#phone').val();
+			this.model.career = $('#career').val();
+			this.model.address = $('#address').val();
+			personList.add(this.model);	//触发add事件
+			localStorage.list = JSON.stringify(personList);
+
+			/*
 			this.model.url="http://127.0.0.1:1337/create";
 			var isNewOrNot = this.model.isNew();
+
+
 			this.model.save({
 				id: this.model.get('id'),
 				name: $('#name').val(),
@@ -103,9 +137,10 @@ define(["jquery","underscore","backbone","bootstrap"],function($,_,Backbone){
 					alert('error')
 				}
 			});
+			*/
 		},
 		formContentChanged: function(){
-			alert('changed')
+			//alert('changed')
 		}
 	})
 	
@@ -122,7 +157,7 @@ define(["jquery","underscore","backbone","bootstrap"],function($,_,Backbone){
 			"click #deleteBtn":"onDelete"
 		},
 		initialize: function(){
-			this.listenTo(personList, 'add', this.addOne);
+			
 		},
 		render: function(){},
 		onRefresh: function(){},
@@ -161,11 +196,6 @@ define(["jquery","underscore","backbone","bootstrap"],function($,_,Backbone){
 					}
 				});
 			})
-		},
-		addOne: function(personModel){
-			//alert('addOne')
-			var view = new PersonView({model:personModel});
-			this.$('#perfectTable-tbody').append(view.render().el)
 		}
 	});
 	

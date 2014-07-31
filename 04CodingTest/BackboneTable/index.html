@@ -7,12 +7,12 @@
 </head>
 <body id="mainArea">
 	<div>
-		<div id="controlPanel">
+		<section class="table-buttons" id="controlPanel">
 			<button id="refreshBtn" type="button" class="btn btn-primary">刷新</button>
 			<button id="addBtn" type="button" class="btn btn-success">增加</button>
 			<button id="editBtn" type="button" class="btn btn-info">编辑</button>
 			<button id="deleteBtn" type="button" class="btn btn-warning">删除</button>
-		</div>
+		</section>
 		<table class="table table-condensed" id="perfectTable">
 			<thead>
 				<tr class="p-table-header">
@@ -94,10 +94,10 @@
 					<input type="text" class="form-control" id="address" name="address" <%if(address){%>value="<%=address%>"<%}%>/>
 				</section>
 			</fieldset>
-			<section>
+			<section class="dialog-buttons">
 				<button type="button" class="btn btn-primary" id="saveChanges">保存</button>
 				<button type="button" class="btn btn-primary" id="discardChanges">重置</button>
-				<button type="button" class="btn btn-default" id="cancelChanges">取消</button>
+				<button type="button" class="btn " id="cancelChanges">取消</button>
 			</section>
 		</form>
 	</script>
