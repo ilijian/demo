@@ -1,14 +1,22 @@
 <!doctype html>
-<html class="title-video-container">
+<html>
 	<head>
-		<link rel="stylesheet" href="css/bamboo.css" type="text/css"/>
+		<link rel="stylesheet" href="css/show.css" type="text/css"/>
 	</head>
-	<body class="">
-		<section class="slider one">
-			<img src="img/egret_white.png">
-		</section>
+	<body>
+		<div class="slider one">
+			<div></div>
+			<figure class="title-logo" id="titleLogo">
+				<img src="img/egret_white.png">
+				<figcaption>EGRET ENGINE</figcaption>
+			</figure>
+			<script type="text/javascript">
+				var titleLogo = document.getElementById('titleLogo');
+				var totalHeight = window.height;
+			</script>
+		</div>
 		<section class="slider two"></section>
-		<script src="../../lib/jquery1.11.1.js"></script>
+		<script src="../lib/jquery1.11.1.js"></script>
 		<script type="text/javascript" src="js/animation.js"></script>
 	</body>
 </html>

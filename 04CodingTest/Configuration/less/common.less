@@ -1,0 +1,40 @@
+body{font-family: "Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft Yahei",Helvetica,sans-serif,Lato}
+.child-function-nav ul { overflow: hidden; background-color: #445571;}
+.child-function-nav li {list-style: none; float: left; border-right: 1px solid #384861; border-right: 1px solid #384861; border-left: 1px solid #4a5e7f;}
+
+.child-function-area {overflow: hidden;}
+.child-function-area .inner-nav{width: 15%; height:100%; float: left;}
+.child-function-area .inner-nav ul {padding: 0}
+.child-function-area .inner-nav li {list-style: none; padding: 5px; border-bottom: 1px solid #ededed; color: #485b79; text-align: center;}
+.child-function-area .inner-nav a{;text-decoration: none;text-align: center; display: inline-block; *display: inline; zoom:1; width: @link-btn-width;}
+.child-function-area .inner-nav a span{line-height: 32px;}
+.child-function-area .inner-nav a:hover{color: #fb9437;}
+.child-function-area .inner-nav a[disabled]{background-color: @link-disable-color;border-color: @link-disable-color;}
+.child-function-area .inner-nav a.selected{ color: #fb9437;}
+
+.inner-function{padding: 20px; float: left; border-left: solid 1px #cacaca; box-sizing: border-box; width: 84%;}
+
+
+
+@link-btn-width: 150px;
+@link-disable-color: #bab6b3;
+@hover-border-color: #c40019;
+@link-btn-height: 60px;
+
+.child-function{color: white;text-decoration: none;text-align: center; background-color: #445571; border-bottom: solid 2px ##445571;display: inline-block; *display: inline; zoom:1; width: @link-btn-width;}
+.child-function span{line-height: @link-btn-height;	/*设定高度使用line-height*/}
+//.child-function:hover{border-color: @hover-border-color;}
+.child-function[disabled]{background-color: @link-disable-color;border-color: @link-disable-color;}
+.child-function.selected{border-bottom: solid 2px #fb9437;}
+
+.pop-mask{background-color: black;opacity: 0.5;width: 100%;height: 100%;z-index: 1000;position: absolute;top: 0; text-align: center;}
+.pop-mask img{position: relative; top: 40%}
+
+.btn-default{padding: 5px;outline: none; text-decoration: none; background-color: #eee; color: #444; font-family:"Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft Yahei",Helvetica,sans-serif,Lato; text-align: center; -webkit-appearance:none; border: 1px solid #aaa;display: inline-block;*display: inline; zoom: 1;}
+.btn-default:hover{cursor: pointer;}
+
+.login-section{width: 400px; height: 300px; margin: auto;}
+.login-btn{width: 100px;}
+
+.datagrid-header-row{}
+.login-form .login-label{width: 80px; display: inline-block;}
